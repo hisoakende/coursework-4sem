@@ -1,0 +1,148 @@
+.ticket {
+  margin: 0 auto;
+  padding: 10px;
+  width: 800px;
+}
+      /* Общие стили контейнера */
+.ticket-field {
+font-family: 'Arial', sans-serif;
+padding: 6px;
+}
+
+/* Стили для сообщения о загрузке и ошибке */
+.ticket-field p {
+color: #666;
+background-color: #f2f2f2;
+border: 1px solid #ddd;
+padding: 10px;
+border-radius: 4px;
+margin-bottom: 15px;
+text-align: center;
+}
+
+/* Стиль для списка билетов */
+ul {
+list-style-type: none;
+padding: 0;
+}
+
+/* Стиль для каждого элемента списка билетов */
+ul li {
+background-color: #fff;
+border: 1px solid #ddd;
+margin-bottom: 10px;
+padding: 10px;
+border-radius: 4px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Стиль для сообщения об ошибке */
+div p:nth-of-type(2) {
+color: #d9534f; /* Красный цвет для сообщений об ошибках */
+background-color: #f9d6d5;
+border-color: #d9534f;
+}
+button {
+  background-color: #4CAF50; /* Светло-зеленый фон */
+  color: white; /* Белый текст */
+  padding: 6px 15px; /* Отступы */
+  border: none; /* Без границ */
+  border-radius: 5px; /* Скругление углов */
+  cursor: pointer; /* Изменение курсора при наведении */
+  font-size: 16px; /* Размер шрифта */
+  margin: 10px 0; /* Отступы сверху и снизу */
+  text-decoration: none; /* Убрать подчеркивание */
+}
+
+button:disabled {
+background-color: #CCCCCC; /* Серый фон для неактивной кнопки */
+color: #666666; /* Темно-серый текст для неактивной кнопки */
+cursor: not-allowed; /* Курсор в виде знака запрета */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination span {
+  line-height: 50px;
+  padding: 0 5px;
+}
+.filter-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out, padding 0.2s ease-in;
+}
+
+.filter-form.open {
+  padding: 20px;
+  max-height: 1000px;
+  transition: max-height 0.2s ease-in, padding 0.2s ease-in;
+}
+
+.filter-form > div {
+  margin-bottom: 16px;
+}
+
+.filter-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 14px;
+}
+
+.filter-form input,
+.filter-form select,
+.filter-form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Для правильного вычисления ширины элементов */
+}
+
+.filter-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filter-form button:hover {
+  background-color: #0056b3;
+}
+.sort-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.sort-controls select {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.sort-controls button {
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+/* Подсвечиваем активную кнопку сортировки */
+.sort-controls button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+}
